@@ -1,13 +1,13 @@
 print("""
 *******************************************************
-                     TÝC TAC TEA 
+                     TÃC TAC TEA 
 oyun:
--3 satýr ve 3 sutundan oluþur.
--oyun iki kiþilktir birinci oyuncu X ikinci oyuncu O koyarak oynar.
--ayný satýr, ayný sutun veya çapraz ayný harfler geldiginde oyun kazanýlýr aksi 
+-3 satÃ½r ve 3 sutundan oluÃ¾ur.
+-oyun iki kiÃ¾ilktir birinci oyuncu X ikinci oyuncu O koyarak oynar.
+-aynÃ½ satÃ½r, aynÃ½ sutun veya Ã§apraz aynÃ½ harfler geldiginde oyun kazanÃ½lÃ½r aksi 
 taktirde oyun berabere biter. 
 
-kullanýcý--> X
+kullanÃ½cÃ½--> X
 bilgisayar--> O
 
 """)
@@ -18,14 +18,14 @@ def tahta_olustur():
     tahta = []
     sayac=1
     for i in range(0,3):
-        satýr=[]
+        satir=[]
         for i in range(0,3):
-            satýr.append(sayac)
+            satir.append(sayac)
             sayac+=1
-        tahta.append(satýr)
+        tahta.append(satir)
 tahta_olustur()
 
-def tahta_yazdýr():
+def tahta_yazdir():
     for i in range(3):
         for j in range(3):
             print(tahta[i][j],end=" ")
@@ -38,7 +38,7 @@ def tahta_yazdýr():
 
 def xo(kordinat,xo):
     if kordinat<0 or kordinat>9:
-        print("HATALI KORDÝNAT TUSLADINIZ!!")
+        print("HATALI KORDINAT TUSLADINIZ!!")
         return
     else:
         if kordinat<=3:
@@ -141,9 +141,9 @@ def kazanma_derecesi():
 
 sayac=1
 oyuncu = 1
-girilen_sayýlar = [1,2,3,4,5,6,7,8,9]
+girilen_sayilar = [1,2,3,4,5,6,7,8,9]
 while True:
-    tahta_yazdýr()
+    tahta_yazdir()
     if kazanan_x()==True:
         print("1.OYUNCU KAZANDI")
         break
@@ -157,23 +157,23 @@ while True:
     print("\n")
 
     if oyuncu==1:
-        print("kullanýcý:",end="")
+        print("kullanici:",end="")
         girdi=int(input())
-        for i in girilen_sayýlar:
+        for i in girilen_sayilar:
             if i==girdi:
                 sayac=0
         if sayac==0:
             xo(girdi, "X")
-            girilen_sayýlar.remove(girdi)
+            girilen_sayilar.remove(girdi)
         else:
-            print("bu index dolu lütfen baþka bir index girin:", end=" ")
+            print("bu index dolu lÃ¼tfen baÃ¾ka bir index girin:", end=" ")
             girdi = int(input())
             continue
 
     else:
         if bilgisayar_kz()!=0:
             print("bilgisayar kazanma derecesi:", bilgisayar_kz())
-            for i in girilen_sayýlar:
+            for i in girilen_sayÃ½lar:
                 if i == bilgisayar_kz():
                     sayac = 0
             if sayac == 0:
@@ -182,7 +182,7 @@ while True:
                 continue
         elif kazanma_derecesi()!=0:
             print("derece kontrol:", kazanma_derecesi())
-            for i in girilen_sayýlar:
+            for i in girilen_sayilar:
                 if i == kazanma_derecesi():
                     sayac = 0
             if sayac==0:
@@ -190,21 +190,21 @@ while True:
             else:
                 continue
         else:
-            rnd=random.choice(girilen_sayýlar)
-            for i in girilen_sayýlar:
+            rnd=random.choice(girilen_sayilar)
+            for i in girilen_say,lar:
                 if i == rnd:
                     sayac=0
             if sayac == 0:
                 xo(rnd, "O")
                 print("rnd:", rnd)
-                girilen_sayýlar.remove(rnd)
+                girilen_sayilar.remove(rnd)
             else:
                 if sayac == 0:
                     xo(rnd, "O")
                     print("rnd:", rnd)
-                    girilen_sayýlar.remove(rnd)
+                    girilen_sayilar.remove(rnd)
                 else:
-                    rnd = random.choice(girilen_sayýlar)
+                    rnd = random.choice(girilen_sayilar)
                     continue
     if oyuncu==1:
         oyuncu=2
