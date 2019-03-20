@@ -1,13 +1,13 @@
 print("""
 *******************************************************
-                     TÝC TAC TEA 
+                     TIC TAC TEA 
 oyun:
--3 satýr ve 3 sutundan oluþur.
--oyun iki kiþilktir birinci oyuncu X ikinci oyuncu O koyarak oynar.
--ayný satýr, ayný sutun veya çapraz ayný harfler geldiginde oyun kazanýlýr aksi 
+-3 satir ve 3 sutundan olusur.
+-oyun iki kisiliktir birinci oyuncu X ikinci oyuncu O koyarak oynar.
+-ayni satir, ayni sutun veya capraz ayni harfler geldiginde oyun kazanilir aksi 
 taktirde oyun berabere biter. 
 
-kullanýcý--> X
+kullanici--> X
 bilgisayar--> O
 
 """)
